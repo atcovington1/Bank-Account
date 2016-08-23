@@ -1,52 +1,64 @@
 package ssa.weekTwoAssignment;
 
-public class MainLine {
+public class Mainline {
 	
 	public static void main(String[] args) {
-		
-		BankAccount savingss = new BankAccount(); 
-		
-		savingss.accountId = 200;
-		savingss.description = "My personal savings account";
-		savingss.balance = 1000.00;
-		
-		System.out.println("Account ID is " + savingss.accountId + ".  "+ "This account is " + savingss.description + ".");
-		System.out.printf("The initial balance is $" + savingss.balance) ;
-		
-		System.out.println("Withdraw $750.00");
-		System.out.println("New Balance  " + savingss.withdraw (750.00));
-		System.out.println("Withdraw $250.00");
-		System.out.println("New Balance  " + savingss.withdraw (250.00));
-		System.out.println("Deposit $200");
-		System.out.println("New Balance " + savingss.deposit(200.00));
-		
-		
-	
-	//	System.out.println("Report "+savingss.print());
-		
-		
-		BankAccount checking = new BankAccount();
-		
-		checking.accountId = 100;
-		checking.description = "My personal checking Account";
-		checking.balance = 500.00;
-		
-		System.out.println("Account ID is " + checking.accountId + ".  "+ "This account is " + checking.description + ".");
-		System.out.printf("The initial balance is $" + checking.balance) ;
-		
-		System.out.println("Deposit $200.00");
-		System.out.println("New Balance" + checking.deposit(200));
-		System.out.println("Withdrawal $600.00");
-		System.out.println(" New Balance " + checking.withdraw(600));
-		System.out.println("Deposit $1000.00");
-		System.out.println("New Balance" + checking.deposit(1000));
-		System.out.println("Withdrawal $300.00");
-		System.out.println("New Balance" + checking.withdraw(300));
-		System.out.println("Withdrawal $200.00");
-		System.out.printf("New Balance:  %.2f " , checking.withdraw(200));
-		System.out.printf("Report: " , checking.print());
-		
-	;
-	}
 
+		
+
+		Account checking = new Account(100, "");
+		System.out.println(checking.print());
+		checking.getAccountId();
+		checking.setDescription("My personal checking account  ");
+		checking.deposit(800.00);
+		checking.print();
+		checking.deposit(300.00);
+		checking.print();
+		checking.withdraw(699.99);
+		checking.print();
+		checking.deposit(149.99);
+		checking.print();
+		checking.withdraw(950.00);
+		checking.print();
+		checking.withdraw(200.00);
+		checking.print();//balance should be 350
+		System.out.println(checking.print());
+		
+		Account savings =new Account(200,"");
+		System.out.println(savings.print());
+		savings.getAccountId();
+		savings.setDescription("My personal savings account");
+		savings.deposit(1000.00);
+		savings.print();
+		savings.deposit(400.00);
+		savings.print();
+		savings.withdraw(750.00);
+		savings.print();
+		savings.withdraw(250.00);
+		savings.print();
+		savings.deposit(650.00);
+		savings.print();
+		System.out.println(savings.print());
+		
+		Account checking2 =new Account(300,"");
+		System.out.println(checking2.print());
+		checking2.getAccountId();
+		checking2.setDescription("My slush fund checking account  ");
+		checking2.deposit(300.00);
+		checking2.print();
+		checking2.withdraw(150.00);
+		checking2.print();
+		checking2.deposit(250.00);
+		checking2.print();
+		System.out.println(checking2.print());
+	
+	checking.print();
+	checking2.print();
+	savings.print();
+	
+	
+	}
+	private int AccountId;
+	
 }
+ 
