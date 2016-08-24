@@ -1,11 +1,21 @@
 package ssa.weekTwoAssignment;
 
+import ssa.weekTwoAssignment.Savings;
+
+
 public class Mainline {
 	
 	public static void main(String[] args) {
 
-		
+		Savings savings1 = new Savings();
+		savings1.setInterestRate(0.20);
+		savings1.deposit(1000.00);
+		System.out.println(savings1.getBalance());
+		savings1.calcDepositInterest(10);
+		System.out.println(savings1.getBalance());
 
+		
+		
 		Account checking = new Account(100, "");
 		System.out.println(checking.print());
 		checking.getAccountId();
@@ -58,7 +68,7 @@ public class Mainline {
 	
 	
 	}
-	private int AccountId;
+	
 	
 }
  
